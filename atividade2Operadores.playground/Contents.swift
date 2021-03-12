@@ -10,13 +10,14 @@ import UIKit
 
 //2
 
-func lance() -> (Int, Double) {
-    let gValue: (Int, Double) = (10, 9.81)
+func lance() -> (Int, Int) {
+    
+    let gValue: (Int, Int) = (Int.random(in: 1...6), Int.random(in: 1...6))
     print(gValue)
     return gValue
 }
 
-lance().0
+lance()
 
 // 3
 
