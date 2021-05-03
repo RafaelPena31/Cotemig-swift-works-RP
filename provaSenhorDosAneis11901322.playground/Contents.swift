@@ -5,6 +5,8 @@ AUTOR DO PROJETO
  Número de matrícula: 11901322
  Número de chamada: 46
  Nome completo: Rafael Augusto Pena Pereira Mesquita
+ 
+ A avaliação foi realizada a partir dos meus conhecimentos adquiridos na aula de Desenvolvimento IOS e conhecimentos sobre programação adquiridos durante minha tragetória
 */
 
 // Constante de controle: quantidade de personagens
