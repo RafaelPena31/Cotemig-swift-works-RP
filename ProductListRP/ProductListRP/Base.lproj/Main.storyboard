@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zSI-uR-fAe">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="3MF-Sa-11F">
+            <objects>
+                <navigationController id="zSI-uR-fAe" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sf2-nS-jHb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iZc-Zd-GQO" kind="relationship" relationship="rootViewController" id="3LT-tj-P1N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yRO-wI-xGQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-661" y="60"/>
+        </scene>
+        <!--Loja-->
+        <scene sceneID="gsV-ot-JFl">
+            <objects>
+                <viewController id="iZc-Zd-GQO" customClass="ViewController" customModule="ProductListRP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w4d-c7-PDm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dAC-x9-nDz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="product" rowHeight="90" id="zUb-Sm-40O" customClass="ProductCell" customModule="ProductListRP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zUb-Sm-40O" id="ewM-fE-tNT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEu-iJ-K7V" userLabel="Name">
+                                                    <rect key="frame" x="20" y="11" width="45" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garrafa térmica" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyS-6a-OKL" userLabel="Description">
+                                                    <rect key="frame" x="20" y="58" width="374" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 59,90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6d7-vj-xrt" userLabel="Price">
+                                                    <rect key="frame" x="324" y="11" width="70" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YEu-iJ-K7V" firstAttribute="leading" secondItem="ewM-fE-tNT" secondAttribute="leadingMargin" id="2M2-cd-fIb"/>
+                                                <constraint firstItem="6d7-vj-xrt" firstAttribute="top" secondItem="ewM-fE-tNT" secondAttribute="topMargin" id="3SG-KF-LjR"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6d7-vj-xrt" secondAttribute="trailing" id="GfL-JR-BED"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MyS-6a-OKL" secondAttribute="bottom" constant="0.5" id="IJX-2G-mHg"/>
+                                                <constraint firstItem="YEu-iJ-K7V" firstAttribute="top" secondItem="ewM-fE-tNT" secondAttribute="topMargin" id="Jep-CM-JYU"/>
+                                                <constraint firstItem="MyS-6a-OKL" firstAttribute="top" secondItem="YEu-iJ-K7V" secondAttribute="bottom" constant="26" id="LkW-CM-Lcc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="MyS-6a-OKL" secondAttribute="trailing" id="igB-4A-3Es"/>
+                                                <constraint firstItem="MyS-6a-OKL" firstAttribute="leading" secondItem="ewM-fE-tNT" secondAttribute="leadingMargin" id="vX0-Kh-u56"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="Description" destination="MyS-6a-OKL" id="2IH-Ly-aVn"/>
+                                            <outlet property="Name" destination="YEu-iJ-K7V" id="nOe-Ii-mSi"/>
+                                            <outlet property="Price" destination="6d7-vj-xrt" id="m7Y-tx-4xJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f2D-8j-qcB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dAC-x9-nDz" firstAttribute="top" secondItem="f2D-8j-qcB" secondAttribute="top" id="EaP-vt-8MW"/>
+                            <constraint firstItem="dAC-x9-nDz" firstAttribute="leading" secondItem="f2D-8j-qcB" secondAttribute="leading" id="KhY-Uc-jwy"/>
+                            <constraint firstItem="dAC-x9-nDz" firstAttribute="bottom" secondItem="f2D-8j-qcB" secondAttribute="bottom" id="Pqk-cv-PGg"/>
+                            <constraint firstItem="dAC-x9-nDz" firstAttribute="centerX" secondItem="w4d-c7-PDm" secondAttribute="centerX" id="c77-Ag-g4w"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Loja" id="TrI-Nq-BrY"/>
+                    <connections>
+                        <outlet property="tableView" destination="dAC-x9-nDz" id="gDV-qj-rha"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I1Q-jn-OSj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334.78260869565219" y="59.598214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
